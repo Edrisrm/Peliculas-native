@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Carousel from 'react-native-snap-carousel';
 
 import movieDB from '../api/MovieDB';
+import { GradientBackground } from '../components/GradientBackground';
 import { HorizontalSlider } from '../components/HorizontalSlider';
 import { MoviePoster } from '../components/MoviePoster';
 import { useMovies } from '../hooks/useMovies';
@@ -26,7 +27,8 @@ export const HomeScreen = () => {
         
     
     return (
-        <ScrollView>
+       <GradientBackground>
+            <ScrollView>
              <View style={{marginTop: top + 30}}>
                 {/* <MoviePoster
                 movie={peliculasEnCine[0]}
@@ -49,6 +51,7 @@ export const HomeScreen = () => {
                         
             </View>
         </ScrollView>
+       </GradientBackground>
        
 
     )
